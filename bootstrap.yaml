@@ -5,7 +5,7 @@ metadata:
 spec:
   destination:
     name: in-cluster
-    namespace: argo-bootstrapping
+    namespace: argocd # this should be the namespace where argocd is deployed
   source:
     path: applications
     repoURL: 'https://github.com/Andrei-sys/argocd-app-of-apps-example.git'
