@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: bootstrap
+spec:
+  destination:
+    name: in-cluster
+    namespace: argo-bootstrapping
+  source:
+    path: applications
+    repoURL: 'https://github.com/Andrei-sys/argocd-app-of-apps-example.git'
+    targetRevision: main
+  project: default
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
+    automated: null

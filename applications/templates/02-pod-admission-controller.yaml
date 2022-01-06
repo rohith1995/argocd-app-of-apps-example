@@ -1,0 +1,24 @@
+{{- if .Values.podadmissioncontroller.enabled }}
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: pod-admission-controller
+spec:
+  destination:
+    name: in-cluster
+    namespace: infra-pod-admission-controller
+  source:
+    path: helm
+    repoURL: 'https://github.com/silviugae/pod-admission-controller.git'
+    targetRevision: main
+    helm:
+      parameters:
+        - name: certmanager.namespace
+          value: infra-cert-manager
+        - name: config.webserver.port
+          value: '443'
+  project: default
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
+{{- end }}
