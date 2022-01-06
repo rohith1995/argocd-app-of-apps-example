@@ -5,8 +5,8 @@ metadata:
   name: pod-admission-controller
 spec:
   destination:
-    name: in-cluster
-    namespace: infra-pod-admission-controller
+    name: {{ .Values.destination.cluster }}
+    namespace: {{ .Values.podadmissioncontroller.namespace }}
   source:
     path: helm
     repoURL: 'https://github.com/silviugae/pod-admission-controller.git'

@@ -5,8 +5,8 @@ metadata:
   name: cert-manager
 spec:
   destination:
-    name: in-cluster
-    namespace: infra-cert-manager
+    name: {{ .Values.destination.cluster }}
+    namespace: {{ .Values.certmanager.namespace }}
   source:
     path: ''
     repoURL: 'https://charts.jetstack.io'

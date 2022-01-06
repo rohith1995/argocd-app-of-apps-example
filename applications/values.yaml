@@ -1,4 +1,8 @@
 certmanager:
   enabled: true
+  namespace: infra-cert-manager # namespace in destination cluster 
 podadmissioncontroller:
   enabled: true
+  namespace: infra-pod-admission-controller # namespace in destination cluster 
+destination:
+  cluster: in-cluster # destination cluster for the apps within the app of apps
