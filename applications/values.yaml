@@ -2,3 +2,5 @@ certmanager:
   enabled: true
 podadmissioncontroller:
   enabled: true
+argocd:
+  namespace: "argocd"
