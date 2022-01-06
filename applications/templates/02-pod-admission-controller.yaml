@@ -3,7 +3,6 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: pod-admission-controller
-  namespace: {{ .Values.argocd.namespace }}
 spec:
   destination:
     name: in-cluster
