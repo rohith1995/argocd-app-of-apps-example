@@ -7,5 +7,8 @@ podadmissioncontroller:
 exporterbootstrap:
   enabled: true
   namespace: exporter-bootstrap # namespace in destination cluster
+k8ssidecarsample:
+  enabled: true
+  namespace: k8s-sidecar-sample # namespace in destination cluster
 rdestination:
   cluster: in-cluster # destination cluster for the apps within the app of apps

@@ -1,16 +1,16 @@
-{{- if .Values.exporterbootstrap.enabled }}
+{{- if .Values.k8ssidecarsample.enabled }}
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: exporter-bootstrap
+  name: k8s-sidecar-sample
 spec:
   destination:
     name: {{ .Values.destination.cluster }}
-    namespace: {{ .Values.exporterbootstrap.namespace }}
+    namespace: {{ .Values.k8ssidecarsample.namespace }}
   source:
-    path: exporter-bootstrap
+    path: k8s-sidecar-sample
     repoURL: 'https://github.com/KevinCHiggins/charts'
-    targetRevision: multi-postgres
+    targetRevision: orig-sidecar
   project: default
   syncPolicy:
     syncOptions:
