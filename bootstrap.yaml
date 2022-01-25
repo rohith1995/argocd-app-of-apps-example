@@ -8,7 +8,7 @@ spec:
     namespace: argocd # this should be the namespace where argocd is deployed
   source:
     path: applications
-    repoURL: 'https://github.com/Andrei-sys/argocd-app-of-apps-example.git'
+    repoURL: 'https://github.com/rohith1995/argocd-app-of-apps-example.git'
     targetRevision: main
   project: default
   syncPolicy:
