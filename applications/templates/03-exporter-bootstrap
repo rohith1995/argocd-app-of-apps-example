@@ -1,0 +1,26 @@
+{{- if .Values.exporterbootstrap.enabled }}
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: exporter-bootstrap
+spec:
+  destination:
+    name: {{ .Values.destination.cluster }}
+    namespace: {{ .Values.exporterbootstrap.namespace }}
+  source:
+    path: helm
+    repoURL: 'https://github.com/KevinCHiggins/charts/tree/multi-postgres.git'
+    targetRevision: main
+    helm:
+      parameters:
+        - name: redis.namespace
+          value: redis-exporter-1
+        - name: redis.namespace
+          value: redis-exporter-2
+        - name: postgres.namespace
+          value: prometheus-postgres-exporter
+  project: default
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
+{{- end }}

@@ -4,5 +4,14 @@ certmanager:
 podadmissioncontroller:
   enabled: true
   namespace: infra-pod-admission-controller # namespace in destination cluster 
+redis-exporter-1:
+  enabled: true
+  namespace: redis # namespace in destination cluster
+redis-exporter-2:
+  enabled: true
+  namespace: redis # namespace in destination cluster
+prometheus-postgres-exporter:
+  enabled: true
+  namespace: postgres # namespace in destination cluster
 destination:
   cluster: in-cluster # destination cluster for the apps within the app of apps
