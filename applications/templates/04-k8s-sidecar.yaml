@@ -1,15 +1,15 @@
-{{- if .Values.k8ssidecarsample.enabled }}
+{{- if .Values.k8ssidecarenabled }}
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: k8s-sidecar-sample
+  name: k8s-sidecar
 spec:
   destination:
     name: {{ .Values.destination.cluster }}
-    namespace: {{ .Values.k8ssidecarsample.namespace }}
+    namespace: {{ .Values.k8ssidecar.namespace }}
   source:
     path: .
-    repoURL: {{ .Values.repourl}}
+    repoURL: {{ .Values.k8ssidecar.repourl}}
     targetRevision: master
   project: default
   syncPolicy:

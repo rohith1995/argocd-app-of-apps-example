@@ -4,12 +4,12 @@ certmanager:
 podadmissioncontroller:
   enabled: true
   namespace: infra-pod-admission-controller # namespace in destination cluster 
-exporterbootstrap:
+exporters:
   enabled: true
-  namespace: exporter-bootstrap # namespace in destination cluster
+  namespace: exporters # namespace in destination cluster
 k8ssidecarsample:
   enabled: true
   namespace: k8s-sidecar-sample # namespace in destination cluster
-repourl: https://ehjaror@gerrit.ericsson.se/a/argonauts/k8s-sidecar.git
+  repourl: https://ehjaror@gerrit.ericsson.se/a/argonauts/k8s-sidecar.git
 destination:
   cluster: in-cluster # destination cluster for the apps within the app of apps
