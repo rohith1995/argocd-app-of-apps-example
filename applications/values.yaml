@@ -7,6 +7,7 @@ podadmissioncontroller:
 exporters:
   enabled: true
   namespace: exporters # namespace in destination cluster
+  repourl: https://gerrit.ericsson.se/a/argonauts/cos/prometheus-exporters-uber-chart.git
 k8ssidecar:
   enabled: true
   namespace: k8s-sidecar # namespace in destination cluster
