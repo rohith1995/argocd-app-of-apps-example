@@ -9,7 +9,7 @@ spec:
     namespace: {{ .Values.k8ssidecarsample.namespace }}
   source:
     path: k8s-sidecar-sample
-    repoURL: 'https://github.com/KevinCHiggins/charts'
+    repoURL: {{ .Values.repourl}}
     targetRevision: orig-sidecar
   project: default
   syncPolicy:
