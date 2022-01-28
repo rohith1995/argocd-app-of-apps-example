@@ -11,7 +11,7 @@ exporters:
 k8ssidecar:
   enabled: true
   namespace: k8s-sidecar # namespace in destination cluster
-  repourl: https://gerrit.ericsson.se/a/argonauts/k8s-sidecar.git
+  repourl: https://ehjaror@gerrit.ericsson.se/a/argonauts/k8s-sidecar.git
   path: k8s-sidecar
   targetRevision: master
 destination:
