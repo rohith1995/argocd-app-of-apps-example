@@ -8,9 +8,9 @@ spec:
     name: {{ .Values.destination.cluster }}
     namespace: {{ .Values.k8ssidecar.namespace }}
   source:
-    path: .
-    repoURL: {{ .Values.k8ssidecar.repourl}}
-    targetRevision: master
+    path: {{ .Values.k8ssidecar.path }}
+    repoURL: {{ .Values.k8ssidecar.repourl }}
+    targetRevision: {{ .Values.k8ssidecar.targetrevision }}
   project: default
   syncPolicy:
     syncOptions:
