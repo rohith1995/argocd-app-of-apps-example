@@ -4,7 +4,7 @@ certmanager:
 podadmissioncontroller:
   enabled: true
   namespace: infra-pod-admission-controller # namespace in destination cluster 
-prometheus-with-exporters:
+prometheuswithexporters:
   enabled: true
   namespace: prometheus-with-exporters # namespace in destination cluster
   path: prometheus-exporters-uber-chart
