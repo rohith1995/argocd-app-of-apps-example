@@ -6,11 +6,11 @@ metadata:
 spec:
   destination:
     name: {{ .Values.destination.cluster }}
-    namespace: {{ .Values.exporters.namespace }}
+    namespace: {{ .Values.prometheus-with-exporters.namespace }}
   source:
-    path: {{ .Values.exporters.path }}
-    repoURL: {{ .Values.exporters.repourl }}
-    targetRevision: {{ .Values.exporters.targetrevision }}
+    path: {{ .Values.prometheus-with-exporters.path }}
+    repoURL: {{ .Values.prometheus-with-exporters.repourl }}
+    targetRevision: {{ .Values.prometheus-with-exporters.targetrevision }}
   project: default
   syncPolicy:
     syncOptions:

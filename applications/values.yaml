@@ -4,9 +4,9 @@ certmanager:
 podadmissioncontroller:
   enabled: true
   namespace: infra-pod-admission-controller # namespace in destination cluster 
-exporters:
+prometheus-with-exporters:
   enabled: true
-  namespace: exporters # namespace in destination cluster
+  namespace: prometheus-with-exporters # namespace in destination cluster
   path: prometheus-exporters-uber-chart
   repourl: https://ehjaror@gerrit.ericsson.se/a/argonauts/cos.git
   targetrevision: master
