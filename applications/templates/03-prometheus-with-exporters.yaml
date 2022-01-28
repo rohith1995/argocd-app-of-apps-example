@@ -1,16 +1,16 @@
-{{- if .Values.exporters.enabled }}
+{{- if .Values.prometheuswithexporters.enabled }}
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: exporters
+  name: "prometheus-with-exporters"
 spec:
   destination:
     name: {{ .Values.destination.cluster }}
-    namespace: {{ .Values.prometheus-with-exporters.namespace }}
+    namespace: {{ .Values.prometheuswithexporters.namespace }}
   source:
-    path: {{ .Values.prometheus-with-exporters.path }}
-    repoURL: {{ .Values.prometheus-with-exporters.repourl }}
-    targetRevision: {{ .Values.prometheus-with-exporters.targetrevision }}
+    path: {{ .Values.prometheuswithexporters.path }}
+    repoURL: {{ .Values.prometheuswithexporters.repourl }}
+    targetRevision: {{ .Values.prometheuswithexporters.targetrevision }}
   project: default
   syncPolicy:
     syncOptions:
