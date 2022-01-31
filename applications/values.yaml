@@ -15,6 +15,7 @@ k8ssidecar:
   path: .
   namespace: k8s-sidecar # namespace in destination cluster
   repourl: https://user@gerrit.ericsson.se/a/argonauts/k8s-sidecar.git
+  sidecar.env.reqUrl: http://172.17.0.20:3000
   targetrevision: master
 destination:
   cluster: in-cluster # destination cluster for the apps within the app of apps
