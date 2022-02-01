@@ -7,17 +7,23 @@ podadmissioncontroller:
 prometheuswithexporters:
   enabled: true
   namespace: prometheus-with-exporters # namespace in destination cluster
-  path: prometheus-exporters-uber-chart
   repourl: https://user@gerrit.ericsson.se/a/argonauts/cos.git
+  path: prometheus-exporters-uber-chart
   targetrevision: master
 k8ssidecar:
   enabled: true
-  path: .
   namespace: k8s-sidecar # namespace in destination cluster
   repourl: https://user@gerrit.ericsson.se/a/argonauts/k8s-sidecar.git
-  sidecar:
-    env:
-      reqUrl: http://172.17.0.20:3000
+  path: .
   targetrevision: master
+  folderId: 0
+  folderUid: "l3KqBxCMz"
+  sidecar:
+    env: # Grafana API details
+      label: grafana_dashboard
+      reqMethod: POST
+      reqUrl: http://172.17.0.20:3000
+      reqUsername: admin
+      reqPassword: prom-operator
 destination:
   cluster: in-cluster # destination cluster for the apps within the app of apps
