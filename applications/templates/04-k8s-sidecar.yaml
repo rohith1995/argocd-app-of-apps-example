@@ -11,6 +11,26 @@ spec:
     path: {{ .Values.k8ssidecar.path }}
     repoURL: {{ .Values.k8ssidecar.repourl }}
     targetRevision: {{ .Values.k8ssidecar.targetrevision }}
+    helm:
+      parameters:
+        - name: sidecar.env.label
+          value: {{ .Values.k8ssidecar.sidecar.env.label
+        - name: sidecar.env.reqMethod
+          value: {{ .Values.k8ssidecar.sidecar.env.reqMethod }}
+        - name: sidecar.env.reqUrl
+          value: {{ .Values.k8ssidecar.sidecar.env.reqUrl }}
+        - name: sidecar.env.reqUsername
+          value: {{ .Values.k8ssidecar.sidecar.env.reqUsername }}
+        - name: sidecar.env.reqPassword
+          value: {{ .Values.k8ssidecar.sidecar.env.reqPassword }}
+#  sidecar:
+#    env: # Grafana API details
+#      label: grafana_dashboard
+#      reqMethod: POST
+#      reqUrl: http://172.17.0.30:3000
+#      reqUsername: admin
+#      reqPassword: prom-operator
+
   project: default
   syncPolicy:
     syncOptions:
