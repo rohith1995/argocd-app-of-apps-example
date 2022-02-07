@@ -14,7 +14,7 @@ spec:
     helm:
       parameters:
         - name: sidecar.env.label
-          value: {{ .Values.k8ssidecar.sidecar.env.label
+          value: {{ .Values.k8ssidecar.sidecar.env.label }}
         - name: sidecar.env.reqMethod
           value: {{ .Values.k8ssidecar.sidecar.env.reqMethod }}
         - name: sidecar.env.reqUrl
