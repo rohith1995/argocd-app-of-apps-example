@@ -23,14 +23,6 @@ spec:
           value: {{ .Values.k8ssidecar.sidecar.env.reqUsername }}
         - name: sidecar.env.reqPassword
           value: {{ .Values.k8ssidecar.sidecar.env.reqPassword }}
-#  sidecar:
-#    env: # Grafana API details
-#      label: grafana_dashboard
-#      reqMethod: POST
-#      reqUrl: http://172.17.0.30:3000
-#      reqUsername: admin
-#      reqPassword: prom-operator
-
   project: default
   syncPolicy:
     syncOptions:
