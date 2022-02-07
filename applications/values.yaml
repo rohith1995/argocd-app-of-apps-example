@@ -22,7 +22,7 @@ k8ssidecar:
     env: # Grafana API details
       label: grafana_dashboard
       reqMethod: POST
-      reqUrl: http://172.17.0.20:3000
+      reqUrl: http://172.17.0.30:3000
       reqUsername: admin
       reqPassword: prom-operator
 destination:
