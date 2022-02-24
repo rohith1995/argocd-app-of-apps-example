@@ -8,7 +8,7 @@ prometheuswithexporters:
   enabled: true
   namespace: prometheus-with-exporters # namespace in destination cluster
   repourl: https://user@gerrit.ericsson.se/a/argonauts/cos.git
-  path: prometheus-exporters-uber-chart
+  path: k8s-sidecar-prometheus-exporters
   targetrevision: master
 destination:
   cluster: in-cluster # destination cluster for the apps within the app of apps
